@@ -1,6 +1,5 @@
 import "./App.css";
 import ScatterPlot from "./components/ScatterPlot";
-
 import BarChart from "./components/BarChart";
 
 function App() {

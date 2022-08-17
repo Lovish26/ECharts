@@ -1,10 +1,12 @@
-import React, { useContext } from "react";
+import React from "react";
 import ReactECharts from "echarts-for-react";
-import scatterPlotContext from "../context/ScatterPlotData/scatterPlotContext";
+import wineData from "../Wine-Data.json";
 
 const ScatterPlot = () => {
-  const context = useContext(scatterPlotContext);
-  const { scatterPlotData } = context;
+  // Fetch and store the Color Intensity and Hue values in array
+  const scatterPlotData = wineData.map((item) => {
+    return [item["Color intensity"], item.Hue];
+  });
 
   const options = {
     xAxis: {
